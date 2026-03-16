@@ -1,10 +1,12 @@
 package com.example.password_validation_service.service;
 
+import com.example.password_validation_service.exception.ApiException;
 import com.example.password_validation_service.message.PasswordProducer;
 import com.example.password_validation_service.model.PasswordEntity;
 import com.example.password_validation_service.repository.PasswordRepository;
 import com.example.password_validation_service.validator.PasswordValidator;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +36,7 @@ public class PasswordService {
 
     public String processPassword(String password) {
         if (!validator.isValid(password)) {
-            throw new IllegalArgumentException("Password does not meet security rules");
+            throw new ApiException("Password does not meet security rules", HttpStatus.UNPROCESSABLE_CONTENT);
         }
         String hash = passwordEncoder.encode(password);
 
