@@ -3,7 +3,7 @@ version: "3.9"
 services:
   mysql:
     image: mysql:8
-    container_name: password-mysql
+    container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -34,3 +34,11 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  redis:
+    image: redis:7
+    container_name: redis
+    restart: always
+    hostname: localhost
+    ports:
+      - "6379:6379"
