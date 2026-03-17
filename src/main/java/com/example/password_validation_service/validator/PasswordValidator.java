@@ -1,7 +1,9 @@
 package com.example.password_validation_service.validator;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class PasswordValidator {
 
@@ -10,8 +12,10 @@ public class PasswordValidator {
 
     public boolean isValid(String password) {
         if (password == null) {
+            log.warn("Password validation failed: password is null");
             return false;
         }
+
         return password.matches(PASSWORD_REGEX);
     }
 
