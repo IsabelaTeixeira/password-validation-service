@@ -17,15 +17,15 @@ public class PasswordController {
     @Autowired
     PasswordService passwordService;
 
-        @PostMapping("/validate")
-        public boolean validatePassword(@RequestBody PasswordRequest request) {
-            log.info("Password validation request received");
-            return passwordService.validatePassword(request.getPassword());
-        }
+    @PostMapping("/validate")
+    public boolean validatePassword(@RequestBody PasswordRequest request) {
+        log.info("Password validation request received");
+        return passwordService.validatePassword(request.getPassword());
+    }
 
-        @PostMapping("/hash")
-         public String hashPassword(@RequestBody PasswordRequest request) {
-            log.info("Password hash generation request received");
-            return passwordService.processPassword(request.getPassword());
+    @PostMapping("/hash")
+    public String hashPassword(@RequestBody PasswordRequest request) {
+        log.info("Password hash generation request received");
+        return passwordService.processPassword(request.getPassword());
     }
 }

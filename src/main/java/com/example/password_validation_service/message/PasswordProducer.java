@@ -16,7 +16,7 @@ public class PasswordProducer {
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendPasswordCreatedEvent(Long id, OffsetDateTime createdAt) {
-    kafkaTemplate.send("password-validated", "Password ID: "+ id + " | Created at: " + createdAt);
+        kafkaTemplate.send("password-validated", "Password ID: " + id + " | Created at: " + createdAt);
     }
 
 }
