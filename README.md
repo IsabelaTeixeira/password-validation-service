@@ -1,8 +1,16 @@
 # Password Validation API
 
-Essa aplicação foi desenvolvida para expor uma API web capaz de validar se uma senha atende a critérios de segurança definidos.  
+Essa aplicação foi desenvolvida para expor uma API web capaz de validar se uma senha atende a critérios de segurança definidos. 
 
 Além da validação, optei por enriquecer a solução com **persistência, cache e mensageria**, demonstrando conhecimentos em arquitetura backend moderna.
+
+---
+
+## Desenho da solução
+<p align="center">
+<img width="400" height="630" src= https://github.com/user-attachments/assets/f21bea42-32cf-427f-94ae-d2cd47d1acd4>
+<img width="395" height="630" src= https://github.com/user-attachments/assets/2a33ea4e-118c-40d4-9cfb-6113edf398f7>
+</p>
 
 ---
 
@@ -203,3 +211,5 @@ Imagem de exemplo:
 Para desligar o conteiner, utilize o comando:
 
 `docker compose down -v`
+
+---
