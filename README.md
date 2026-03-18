@@ -32,6 +32,8 @@ A aplicação segue princípios de **microserviços** e **separação de respons
 
 ## Principais decisões de design
 
+O desenvolvimento do projeto foi conduzido na branch `develop` , onde foram realizados os commits e a evolução do código. A branch `main` foi mantida como base estável para entrega da versão final, seguindo boas práticas de versionamento.
+
 - ### Uso de DTO
 Optei por utilizar DTOs de entrada para desacoplar o contrato da API da camada de persistência. Essa decisão evita a exposição direta das entidades do banco, 
 reduz o acoplamento entre a API, o modelo de dados e facilita futuras versões da API sem impactar a estrutura interna do sistema.
