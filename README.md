@@ -48,7 +48,9 @@ utilizei o `PasswordEncoder` do Spring Security configurado como Bean, aproveita
 O Redis foi utilizado para evitar validações repetidas da mesma senha em um curto intervalo de tempo, demonstrando a 
 redução de processamento desnecessário, uso de cache distribuído com o ontrole de expiração automática via TTL.
 
-> Observação: O cache é temporário e não substitui o banco de dados.
+Por boas práticas de segurança, o mais adequado seria utilizar o Redis para armazenar apenas hashes, evitando o cache de dados sensíveis em texto puro.
+Contudo, nesta solução, o Redis foi empregado diretamente no fluxo de validação com finalidade demonstrativa de arquitetura e uso de cache.
+Essa premissa foi adotada, pois o algoritmo BCrypt do Spring Security gera hashes diferentes a cada execução devido ao uso de salt aleatório, o que inviabiliza seu reaproveitamento como chave de cache.
 
 - ### Kafka (Mensageria)
 Eventos são publicados, no tópico `password.validated` utilizando Kafka, após o processamento da senha para simular integração com outros sistemas. Demonstrando
