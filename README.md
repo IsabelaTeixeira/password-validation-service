@@ -119,48 +119,57 @@ Imagem de exemplo:
 Assim, a aplicação estará disponível em `http://localhost:8080`.
 
 ### Testar a API
+A senha deve atender aos seguintes critérios:
 
-- **Validar senha:**
+- Mínimo de 9 caracteres
+- Ao menos 1 dígito
+- Ao menos 1 letra minúscula
+- Ao menos 1 letra maiúscula
+- Ao menos 1 caractere especial: !@#$%^&*()-+
+- Não possuir caracteres repetidos
+
+  
+  
+**Validar senha:**
 
 `POST http://localhost:8080/password/validate`
 
 ```bash
 {
-  "password": "ExemploVaLidO!"
+  "password": "ExemploVaLidO1!"
 }
 ```
 
-**Retorno:** `200 OK` 
+- Retorno: `200 OK` 
 
 Senha válida: `true` 
 
 Senha inválida: `false`
 
-- **Salvar o hash da senha:**
+**Salvar o hash da senha:**
 
 `POST http://localhost:8080/password/hash`
 
 ```bash
 {
-  "password": "ExemploVaLidO!"
+  "password": "ExemploVaLidO1!"
 }
 ```
 
-**Retorno:**
+- Retorno:
 
-Senha válida:
+Senha válida: `200 OK` com o hash gerado
 
-`200 OK` com o hash gerado
+Senha inválida: `422 UNPROCESSABLE ENTITY`
 
-Senha inválida: 
-```bash 
-422 UNPROCESSABLE ENTITY
+```bash
 {
 	"error": "Password does not meet security rules",
 	"timestamp": "2026-03-17T17:07:36.775483",
 	"status": 422
 }
 ```
+--- 
 
 ## Testar via terminal os serviços utilizados no docker-compose
 
