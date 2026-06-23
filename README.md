@@ -8,8 +8,8 @@ Além da validação, optei por enriquecer a solução com **persistência, cach
 
 ## Desenho da solução
 <p align="center">
-<img width="400" height="630" src= https://github.com/user-attachments/assets/f21bea42-32cf-427f-94ae-d2cd47d1acd4>
-<img width="395" height="630" src= https://github.com/user-attachments/assets/2a33ea4e-118c-40d4-9cfb-6113edf398f7>
+<img width="400" height="330" src= https://github.com/user-attachments/assets/f21bea42-32cf-427f-94ae-d2cd47d1acd4>
+<img width="395" height="330" src= https://github.com/user-attachments/assets/2a33ea4e-118c-40d4-9cfb-6113edf398f7>
 </p>
 
 ---
@@ -77,7 +77,7 @@ O projeto inclui testes unitários para validar a aplicação, alcançando 81% d
 90% de cobertura de linhas, conforme verificado pelo Run Coverage do IntelliJ.
 
 
-<img width="500" height="500" alt="coberturadeteste" src="https://github.com/user-attachments/assets/3f1a25dd-dbb3-4e4b-90bd-bb198391be9f" />
+<img width="500" height="200" alt="coberturadeteste" src="https://github.com/user-attachments/assets/3f1a25dd-dbb3-4e4b-90bd-bb198391be9f" />
 
 
 Os testes foram implementados com JUnit 5 e Mockito, permitindo mockar dependências e garantir que cada componente seja testado isoladamente.
@@ -108,7 +108,7 @@ Para verificar se os conteiners estão rodando corretamente:
 
 Imagem de exemplo:
 
-<img width="807" height="702" alt="docker-compose" src="https://github.com/user-attachments/assets/14d0b989-7a01-400e-b431-1ffa691be1f2" />
+<img width="707" height="302" alt="docker-compose" src="https://github.com/user-attachments/assets/14d0b989-7a01-400e-b431-1ffa691be1f2" />
 
 ### Rodar a Aplicação
 
@@ -185,7 +185,7 @@ Rode os seguintes comandos:
 
 Imagem de exemplo:
 
-<img width="502" height="500" alt="mysql" src="https://github.com/user-attachments/assets/757e30f8-7edb-4f2f-b367-490f6f7ae914" />
+<img width="502" height="400" alt="mysql" src="https://github.com/user-attachments/assets/757e30f8-7edb-4f2f-b367-490f6f7ae914" />
 
 ### KAFKA 
 
